@@ -47,6 +47,42 @@ public class Solution {
     }
 }
 ```
+#### version 2 with fast and slow
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     public int val;
+ *     public ListNode next;
+ *     public ListNode(int val=0, ListNode next=null) {
+ *         this.val = val;
+ *         this.next = next;
+ *     }
+ * }
+ */
+public class Solution {
+    public ListNode RemoveNthFromEnd(ListNode head, int n) 
+    {
+        //fast and slow pointer 
+        var dummy = new ListNode(0, head);
+        var fast = dummy;
+        var slow = dummy;
+        int c = 0;
+        while(c < n+1)
+        {
+            fast = fast.next;
+            c++;
+        }
+        
+        while(fast!=null)
+        {
+            slow = slow.next;
+            fast = fast.next;
+        }
+        slow.next = slow.next.next;
+        return dummy.next;
+    }
+}
 
 
 
