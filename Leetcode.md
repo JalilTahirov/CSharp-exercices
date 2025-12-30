@@ -73,7 +73,7 @@ public class Solution {
             fast = fast.next;
             c++;
         }
-        
+
         while(fast!=null)
         {
             slow = slow.next;
@@ -83,6 +83,29 @@ public class Solution {
         return dummy.next;
     }
 }
+
+#### 206. Reverse Linked List
+
+[leetcode](https://leetcode.com/problems/reverse-linked-list/description/)
+```
+public static ListNode ReverseList(ListNode head)
+{
+    ListNode prev = null;
+    ListNode curr = head;
+
+    while(curr != null)
+    {
+        var temp = curr.next;
+        curr.next = prev;
+        prev = curr;
+        curr = temp;
+    }
+
+    return prev;
+
+}
+
+```
 
 
 
