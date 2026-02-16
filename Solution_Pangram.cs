@@ -2,7 +2,7 @@ public class Solution_Pangram
 {
     public void Main()
     {
-        Console.WriteLine(Pangram("ABBSWHHD kkkwwkllwoow kdwd!!33232!!"));
+        Console.WriteLine(Pangram("ABBSWHHD kkkwwk   llwoow kdwd!!!!"));
     }
 
     public bool Pangram(string word)
