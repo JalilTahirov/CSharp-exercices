@@ -22,7 +22,4 @@ public bool ContainsDuplicates(int[] nums)
 
         return false;
 }
-
-
-
 }
